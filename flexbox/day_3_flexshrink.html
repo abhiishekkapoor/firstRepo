@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-shrink</title>
+    <style>
+      .container {
+        display: flex;
+      }
+      .col {
+        padding: 10px;
+        width: 200px;
+        /* wraps only if neccessary */
+      }
+      .col:nth-child(1) {
+        background-color: red;
+        flex-shrink: 6;
+      }
+      .col:nth-child(2) {
+        background-color: green;
+        flex-shrink: 3;
+      }
+      .col:nth-child(3) {
+        background-color: orangered;
+        flex-shrink: 2;
+      }
+      .col:nth-child(4) {
+        background-color: lightskyblue;
+        flex-shrink: 1;
+      }
+      /*
+    flex-grow:1; ==> means all boxes takes up equal width
+    
+    .col:nth-child(1){
+      flex-grow:6 ==> means first box takes width upto 6 column
+    }
+    */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="col">1</div>
+      <div class="col">2</div>
+      <div class="col">3</div>
+      <div class="col">4</div>
+    </div>
+  </body>
+</html>
